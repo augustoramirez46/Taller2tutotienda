@@ -1,0 +1,157 @@
+.gallery {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    overflow: hidden;
+
+    background: linear-gradient(317.09deg, #EDE0D7 34.3%, #FAF9E8 95.4%);
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+
+    &__choose {
+        margin: 60px auto 0;
+    }
+
+    &__ellipse {
+        position: absolute;
+        left: 3%;
+        top: -90px;
+        height: 200px;
+    }
+
+    &__link {
+        @extend %link-style;
+
+    }
+
+    &__link--select {
+
+        font-size: .85em;
+        font-weight: 700;
+        color: rgb(99, 99, 124);
+
+    }
+
+    $w: 700px;
+    $h: 700px;
+
+    &__gallery {
+        box-sizing: border-box;
+        width: $w;
+        height: $h;
+        overflow: hidden;
+        margin: auto auto;
+        position: relative;
+    }
+
+    &__strip {
+        display: flex;
+        transition: transform .5s ease-in-out;
+    }
+
+    &__img {
+        height: $h;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    &__bton {
+        position: absolute;
+        top: $h/2;
+        height: 35px;
+        width: 80px;
+        border-radius: 37px;
+        border: none;
+
+        color: $lightBlue;
+        cursor: pointer;
+        box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.05);
+        background: $mainColor;
+
+        &--right {
+            right: 0px;
+        }
+
+        &--left {
+            left: 0px;
+        }
+    }
+
+
+
+    @media (max-width: $smallDevice) {
+        flex-direction: column;
+
+        $w: 300px;
+        $h: 300px;
+
+        &__gallery {
+            box-sizing: border-box;
+            width: $w;
+            height: $h;
+            overflow: hidden;
+            margin: auto auto;
+            position: relative;
+        }
+
+        &__img {
+            height: $h;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        &__bton {
+            position: absolute;
+            top: $h/2;
+            font-size: 12px;
+            height: 40px;
+            width: 60px;
+            border-radius: 37px;
+            border: none;
+            cursor: pointer;
+            background: $mainColor;
+            font-family: 'Lato';
+
+            &--right {
+                right: 0px;
+            }
+
+            &--left {
+                left: 0px;
+            }
+        }
+
+        &__ellipse {
+            position: absolute;
+            left: -50px;
+            top: -50px;
+            height: 100px;
+            width: 100px;
+
+        }
+
+        &__choose {
+            display: flex;
+            padding: 5px 3px;
+            justify-content: space-around;
+            align-content: center;
+            margin-left: 0px;
+            margin-right: 0px;
+            width: 100%;
+            height: fit-content;
+        }
+
+        &__link {
+            margin: .75em;
+
+        }
+
+
+    }
+
+
+
+}

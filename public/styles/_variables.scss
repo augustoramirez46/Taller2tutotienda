@@ -1,0 +1,16 @@
+$mainColor: rgb(33, 192, 144);
+$bgGradient: linear-gradient(328.55deg, #EDE0D7 34.3%, #FAF9E8 95.4%);
+$lightBlue: #EBEBFE;
+$lightGray: #73738D;
+$darkGray: #605D5D;
+$smallDevice: 575.98px;
+
+%link-style {
+    text-decoration: none;
+    font-size: .75em;
+    font-family: 'Lato';
+    font-style: normal;
+    color: $lightGray;
+    margin: 6em 4em 0em 4em;
+
+}

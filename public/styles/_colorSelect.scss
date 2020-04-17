@@ -1,0 +1,113 @@
+.colorChoose {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(135.93deg, #EFFFFA 5.2%, #EFFFFA 44.38%, #D9EFEE 81.19%);
+    align-content: flex-start;
+
+    &__section {
+        width: 100%;
+        height: fit-content;
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0% auto 0% 15%;
+        padding-top: 5%;
+    }
+
+    &__title {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 72px;
+        margin: 0% 0 0 0;
+
+
+        color: #605D5D;
+    }
+
+    &__content {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.12em;
+        margin-left: 20px;
+
+        color: #7A6D6D;
+    }
+
+    &__content--emphasis {
+        color: $mainColor;
+        margin: 0;
+    }
+
+    &__selector {
+        width: 30%;
+        margin: 0% 0% 0% 15%;
+
+    }
+
+    &__circle {
+        filter: drop-shadow (20px 20px 20px rgba(0, 0, 0, 0.25));
+        width: 70px;
+        height: 70px;
+        margin: 15%;
+
+    }
+
+    &__display {
+        width: auto;
+        margin: auto auto;
+    }
+
+    &__main {
+        width: 650px;
+        margin: auto;
+    }
+
+    &__thumbs {
+        display: none;
+    }
+
+    @media (max-width: $smallDevice) {
+
+        &__selector {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0px 0px;
+            justify-content: center;
+        }
+
+        &__circle {
+            margin: .75em;
+
+            width: 50px;
+            height: 50px;
+
+            &--noMobile {
+                display: none;
+            }
+        }
+
+        &__display {
+            box-sizing: border-box;
+            width: auto;
+            margin: auto auto;
+        }
+
+        &__main {
+            width: 270px;
+            margin: 0px 0px 0px 55px;
+        }
+
+        &__thumbs {
+            display: none;
+        }
+    }
+
+}

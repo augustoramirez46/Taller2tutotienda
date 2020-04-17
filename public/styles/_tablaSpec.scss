@@ -1,0 +1,153 @@
+.spec {
+    background: $mainColor;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+
+    &__mockups {
+        position: relative;
+        margin: -150px 0 -150px 140px;
+
+    }
+
+    &__mockup {
+        padding-top: 20px;
+        height: 900px;
+        position: relative;
+
+        &--behind {
+            position: absolute;
+            top: -90px;
+            left: -140px;
+        }
+    }
+
+
+
+    &__paragraph {
+        width: 400px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 25px;
+        color: #E0E0F1;
+        margin: auto 5px;
+    }
+
+    &__title {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: .5em;
+
+        color: #E0E0F1;
+
+        &--contra {
+            letter-spacing: .27em;
+        }
+    }
+
+    &__camisetas {
+        margin: auto .2%;
+        font-style: normal;
+        font-weight: 900;
+
+    }
+
+    &__ca {
+
+        font-style: normal;
+        font-weight: 900;
+        font-size: 96px *1.5;
+        line-height: 78px;
+
+        color: $lightBlue;
+    }
+
+    &__mi {
+
+        font-style: normal;
+        font-weight: 900;
+        font-size: 106px *1.5;
+        line-height: 86px *1.5;
+        /* or 86px */
+
+
+        color: #F2E6A8;
+    }
+
+    &__se {
+
+
+        font-weight: 900;
+        font-size: 116px *1.5;
+        line-height: 95px *1.5;
+        /* or 95px */
+
+
+        color: $lightBlue;
+    }
+
+    &__tas {
+
+
+        font-weight: 900;
+        font-size: 71px *1.5;
+        line-height: 63px*1.5;
+        /* or 63px */
+
+
+        color: $lightBlue;
+    }
+
+    @media (max-width: $smallDevice) {
+
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+
+        &__mockups {
+
+            margin: 0 auto;
+            height: 400px;
+            width: 100%;
+            display: flex;
+            align-content: center;
+        }
+
+        &__mockup {
+
+            height: 400px;
+            margin: auto auto;
+            padding: 0px 0px 0px 0px;
+
+            &--behind {
+                left: 30px;
+
+            }
+        }
+
+        &__title {
+            font-size: 30px;
+            letter-spacing: .3em;
+
+            &--contra {
+                letter-spacing: .1em;
+                ;
+            }
+        }
+
+        &__paragraph {
+            width: 270px;
+            margin-bottom: 60px;
+        }
+    }
+}
