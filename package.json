@@ -2,14 +2,16 @@
   "name": "taller2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon index.js"
+    "start": "npx nodemon main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "handlebars": "^4.7.6"
   }
 }

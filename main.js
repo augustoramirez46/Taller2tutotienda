@@ -3,11 +3,18 @@ console.log('aber');
 const express = require('express');
 //para paths absolutos
 const path = require('path');
+// importar express handlebars
+const xprshandle = require('express-handlebars');
 
 const app = express();
 //poner al inicio siempre pal auto refresh
 //npm nodemon index.js
 //o npm start
+
+// setea el render del doc con handlebars
+app.engine('handlebars', xprshandle());
+// use el motor de render handlebars
+app.set('view engine', 'handlebars');
 
 //pone la carpeta public para poder leer los demas archivos que contiene
 app.use(express.static('public'));
@@ -21,7 +28,7 @@ app.get('/', function (req, res) {
 
     //asi se pone la pagina pasada en la nueva
     //tambien envia archivos
-    res.sendFIle(path.join(__dirname, '/public/index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.get('/contacto', function (req, res) {
@@ -30,8 +37,13 @@ app.get('/contacto', function (req, res) {
 });
 
 app.get('/tienda', function (req, res) {
-    res.send('ya en la tienda');
+    //renderiza los handlebars en el main
+    res.render('store');
 })
+
+app.get('/store', function (req, res) {
+
+});
 //en app real, puerto 80 u otros reales
 //poner localhost:3000 en chrome pa abrir
 app.listen(3000, function () {
