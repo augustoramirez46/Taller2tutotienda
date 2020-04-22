@@ -37,11 +37,34 @@ app.get('/contacto', function (req, res) {
 });
 
 app.get('/tienda', function (req, res) {
+
+    // objeto contexto 
+    var context = {
+        title: "el titulo desde el contexto",
+
+    };
+
     //renderiza los handlebars en el main
-    res.render('store');
+    res.render('store', context);
 })
 
-app.get('/store', function (req, res) {
+app.get('/producto/:name', function (req, res) {
+
+    var context = {};
+
+    if (req.params.name === 'pantalon') {
+        var context = {
+            title: '',
+            img: '',
+            description: '',
+        }
+    };
+
+
+
+    console.log(req.params.name);
+
+    res.render('product', context);
 
 });
 //en app real, puerto 80 u otros reales
