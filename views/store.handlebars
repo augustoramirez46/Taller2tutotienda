@@ -3,3 +3,18 @@
 <div>
     <p> hola desde el handlebar</p>
 </div>
+
+{{#if options}}
+<h1>hola desde las opciones disponibles</h1>
+{{/if}}
+
+
+<!-- con esto se hace el grid de productos -->
+{{#if listadeproductos}}
+<h1>Esta es la lista big de productos</h1>
+<ol>
+    {{#each listadeproductos}}
+    <li>{{ name }} <strong>{{ price }}</strong></li>
+    {{/each}}
+</ol>
+{{/if}}

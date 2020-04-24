@@ -6,6 +6,10 @@ const path = require('path');
 // importar express handlebars
 const xprshandle = require('express-handlebars');
 
+// importar lista de productos
+const products = require('./products');
+console.log(products);
+
 const app = express();
 //poner al inicio siempre pal auto refresh
 //npm nodemon index.js
@@ -41,6 +45,7 @@ app.get('/tienda', function (req, res) {
     // objeto contexto 
     var context = {
         title: "el titulo desde el contexto",
+        options: ['azul', 'verde'],
 
     };
 
@@ -48,18 +53,37 @@ app.get('/tienda', function (req, res) {
     res.render('store', context);
 })
 
-app.get('/producto/:name', function (req, res) {
+// el despues del : es la variable de nombre que recibe el handlebar
+app.get('/producto/:name/:id', function (req, res) {
 
     var context = {};
+
+    // encontrar elemento en la lista
+    var foundElement = products.find(function (elem) {
+        if (elem.id == req.params.id) {
+            return true;
+        }
+    });
+
+    context = foundElement;
 
     if (req.params.name === 'pantalon') {
         var context = {
             title: '',
             img: '',
             description: '',
+            options: ['rojo', 'verde'],
         }
     };
 
+    if (req.params.name === 'camiseta') {
+        var context = {
+            title: '',
+            img: '',
+            description: '',
+            options: [],
+        }
+    };
 
 
     console.log(req.params.name);
