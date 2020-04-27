@@ -8,7 +8,7 @@ const xprshandle = require('express-handlebars');
 
 // importar lista de productos
 const products = require('./products');
-console.log(products);
+
 
 // recorrer productos para agregar free shipping
 products.forEach(function (elem) {
@@ -52,10 +52,30 @@ app.get('/contacto', function (req, res) {
 
 app.get('/tienda', function (req, res) {
 
+    var filtered;
+
+    if (req.query.price_lt) {
+        filtered = products.filter(function (elem) {
+            if (elem.price < req.query.price_lt) {
+                return true;
+            };
+        });
+    };
+
+    if (req.query.search) {
+        filtered = products.filter(function (elem) {
+            if (elem.price < req.query.search) {
+                return true;
+            };
+        });
+    };
+
+
+    console.log(filtered);
     // objeto contexto 
     var context = {
         title: "el titulo desde el contexto",
-        products: products,
+        products: filtered,
     };
 
     //renderiza los handlebars en el main
@@ -64,6 +84,10 @@ app.get('/tienda', function (req, res) {
 
 // el despues del : es la variable de nombre que recibe el handlebar
 app.get('/producto/:name/:id', function (req, res) {
+
+    var id = parseInt(req.params.id);
+    var product = products[id];
+
 
     var context = {};
 
@@ -75,29 +99,29 @@ app.get('/producto/:name/:id', function (req, res) {
     });
 
     context = foundElement;
+    /*
+        if (req.params.name === 'pantalon') {
+            var context = {
+                title: '',
+                img: '',
+                description: '',
+                options: ['rojo', 'verde'],
+            }
+        };
 
-    if (req.params.name === 'pantalon') {
-        var context = {
-            title: '',
-            img: '',
-            description: '',
-            options: ['rojo', 'verde'],
-        }
-    };
+        if (req.params.name === 'camiseta') {
+            var context = {
+                title: '',
+                img: '',
+                description: '',
+                options: [],
+            }
+        };
 
-    if (req.params.name === 'camiseta') {
-        var context = {
-            title: '',
-            img: '',
-            description: '',
-            options: [],
-        }
-    };
+        console.log(req.params.name);
+        */
 
-
-    console.log(req.params.name);
-
-    res.render('product', context);
+    res.render('product', product /*context*/ );
 
 });
 //en app real, puerto 80 u otros reales

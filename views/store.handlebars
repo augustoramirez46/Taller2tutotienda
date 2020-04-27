@@ -1,10 +1,20 @@
+<nav>
+    Filtro por precio
+    <select>
+        <option value="" disabled="true" selected="true">Selecciona una opción...</option>
+        <option value="1900">Menor a $1.900</option>
+        <option value="2600">Menor a $2.600</option>
+        <option value="1500">Menor a $1.500</option>
+    </select>
+</nav>
+
 <section class="productContainer">
     <!-- con esto se hace el grid de productos -->
     {{#if products}}
     {{#each products}}
     <!-- <li>{{ name }} <strong>{{ price }}</strong></li> -->
     <div class="thumb">
-        <a href="/producto/{{ title }}/{{ id }}" class="thumb__link">
+        <a href="/producto/{{ title }}/{{ @index }}" class="thumb__link">
             <img src="{{ img }}" class="thumb__img" alt="">
             <h4 class="thumb__title">{{ title }}</h4>
             <p class="thumb__price">{{ price }}</p>

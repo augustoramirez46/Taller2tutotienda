@@ -37,7 +37,10 @@ const products = [
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
-        price: 2500,
+        price: 2000,
+        weight: 150,
+        sales: 4,
+        size: 900,
         options: ['azul', 'rosado', 'verde'],
 
     },
@@ -45,9 +48,12 @@ const products = [
     {
         id: 3,
         title: 'Sticker 0',
-        img: '/img/stickers/calc1.png',
+        img: '/img/stickers/calc0.png',
         description: 'lorem ipsum',
-        price: 2500,
+        price: 1300,
+        weight: 350,
+        sales: 14,
+        size: 500,
         options: ['azul', 'rosado', 'verde'],
 
     },
@@ -55,9 +61,12 @@ const products = [
     {
         id: 4,
         title: 'Sticker 0',
-        img: '/img/stickers/calc1.png',
+        img: '/img/stickers/calc2.png',
         description: 'lorem ipsum',
-        price: 2500,
+        price: 1700,
+        weight: 100,
+        sales: 17,
+        size: 800,
         options: ['azul', 'rosado', 'verde'],
 
     },
@@ -65,9 +74,12 @@ const products = [
     {
         id: 5,
         title: 'Sticker 0',
-        img: '/img/stickers/calc1.png',
+        img: '/img/stickers/calc3.png',
         description: 'lorem ipsum',
-        price: 2500,
+        price: 2700,
+        weight: 200,
+        sales: 1,
+        size: 60,
         options: ['azul', 'rosado', 'verde'],
 
     },
@@ -75,9 +87,12 @@ const products = [
     {
         id: 6,
         title: 'Sticker 0',
-        img: '/img/stickers/calc1.png',
+        img: '/img/stickers/calc4.png',
         description: 'lorem ipsum',
-        price: 2500,
+        price: 2400,
+        weight: 90,
+        sales: 3,
+        size: 50,
         options: ['azul', 'rosado', 'verde'],
 
     },
