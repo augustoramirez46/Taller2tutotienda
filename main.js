@@ -11,7 +11,7 @@ const products = require('./products');
 console.log(products);
 
 // recorrer productos para agregar free shipping
-products.forEach(function () {
+products.forEach(function (elem) {
 
     if (elem.price >= 80000) {
         elem.freeShipping = true;
@@ -55,8 +55,7 @@ app.get('/tienda', function (req, res) {
     // objeto contexto 
     var context = {
         title: "el titulo desde el contexto",
-        options: ['azul', 'verde'],
-
+        products: products,
     };
 
     //renderiza los handlebars en el main
