@@ -23,9 +23,10 @@ const products = [
 
     {
         id: 1,
-        title: 'poster',
-        img: '/img/imagen.jpg',
+        title: 'Sticker 0',
+        img: '/img/calc0.png',
         description: 'lorem ipsum',
+        price: 2500,
         options: ['azul', 'rosado', 'verde'],
 
     }

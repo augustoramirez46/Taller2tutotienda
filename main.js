@@ -10,6 +10,16 @@ const xprshandle = require('express-handlebars');
 const products = require('./products');
 console.log(products);
 
+// recorrer productos para agregar free shipping
+products.forEach(function () {
+
+    if (elem.price >= 80000) {
+        elem.freeShipping = true;
+    } else {
+        elem.freeShipping = false;
+    }
+});
+
 const app = express();
 //poner al inicio siempre pal auto refresh
 //npm nodemon index.js

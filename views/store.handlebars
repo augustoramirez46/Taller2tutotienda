@@ -1,20 +1,16 @@
 <h1 class="title"> {{ title }}</h1>
 
-<div>
-    <p> hola desde el handlebar</p>
-</div>
-
-{{#if options}}
-<h1>hola desde las opciones disponibles</h1>
-{{/if}}
-
-
 <!-- con esto se hace el grid de productos -->
-{{#if listadeproductos}}
-<h1>Esta es la lista big de productos</h1>
-<ol>
-    {{#each listadeproductos}}
-    <li>{{ name }} <strong>{{ price }}</strong></li>
-    {{/each}}
-</ol>
+{{#if products}}
+{{#each products}}
+<!-- <li>{{ name }} <strong>{{ price }}</strong></li> -->
+<div class="product">
+    <a href="/producto/{{ title }}/{{ id }}" class="product__link">
+        <img src="{{ img }}" class="product_img" alt="">
+        <h4 class="product__title">{{ title }}</h4>
+        <p class="product__price">{{ price }}</p>
+
+    </a>
+</div>
+{{/each}}
 {{/if}}
