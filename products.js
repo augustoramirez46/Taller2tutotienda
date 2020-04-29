@@ -1,7 +1,7 @@
 const products = [
 
     {
-        id: 0,
+
         title: 'poster',
         img: '/img/stickers/calc0.png',
         description: 'lorem ipsum',
@@ -23,7 +23,7 @@ const products = [
     },
 
     {
-        id: 1,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -33,7 +33,7 @@ const products = [
     },
 
     {
-        id: 2,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -46,7 +46,7 @@ const products = [
     },
 
     {
-        id: 3,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc0.png',
         description: 'lorem ipsum',
@@ -59,7 +59,7 @@ const products = [
     },
 
     {
-        id: 4,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc2.png',
         description: 'lorem ipsum',
@@ -72,7 +72,7 @@ const products = [
     },
 
     {
-        id: 5,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc3.png',
         description: 'lorem ipsum',
@@ -85,7 +85,7 @@ const products = [
     },
 
     {
-        id: 6,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc4.png',
         description: 'lorem ipsum',
@@ -98,7 +98,7 @@ const products = [
     },
 
     {
-        id: 7,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -108,7 +108,7 @@ const products = [
     },
 
     {
-        id: 8,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -118,7 +118,7 @@ const products = [
     },
 
     {
-        id: 9,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -128,7 +128,7 @@ const products = [
     },
 
     {
-        id: 10,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -138,7 +138,7 @@ const products = [
     },
 
     {
-        id: 11,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -148,7 +148,7 @@ const products = [
     },
 
     {
-        id: 12,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -158,7 +158,7 @@ const products = [
     },
 
     {
-        id: 13,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -168,7 +168,7 @@ const products = [
     },
 
     {
-        id: 14,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -178,7 +178,7 @@ const products = [
     },
 
     {
-        id: 15,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -188,7 +188,7 @@ const products = [
     },
 
     {
-        id: 16,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -198,7 +198,7 @@ const products = [
     },
 
     {
-        id: 17,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -208,7 +208,7 @@ const products = [
     },
 
     {
-        id: 18,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -218,7 +218,7 @@ const products = [
     },
 
     {
-        id: 19,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
@@ -228,7 +228,7 @@ const products = [
     },
 
     {
-        id: 20,
+
         title: 'Sticker 0',
         img: '/img/stickers/calc1.png',
         description: 'lorem ipsum',
