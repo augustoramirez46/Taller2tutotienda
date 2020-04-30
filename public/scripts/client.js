@@ -1,5 +1,6 @@
-if (false) {
-    var hambtn = document.querySelector('.hamburguerbtn');
+var hambtn = document.querySelector('.hamburguerbtn');
+
+if (hambtn) {
     var mainnav = document.querySelector('.nav');
 
     var handleHamClick = function (event) {

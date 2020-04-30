@@ -34,16 +34,18 @@ function configureRoutes(app, db) {
     app.get('/tienda', function (req, res) {
 
 
-        var filters = {};
+        var filters = {
+            $and: []
+        };
 
 
         if (req.query.price_lt) {
             console.log(req.query.price_lt);
-            filters.price = {
+            filters.$and.push({
                 price: {
                     $lte: parseInt(req.query.price_lt)
                 },
-            };
+            });
 
         };
 
@@ -51,19 +53,23 @@ function configureRoutes(app, db) {
 
         };
 
+        if (filters.$and.length === 0) {
+            delete filters.$and;
+        }
+
         // Get the documents collection
         const collection = db.collection('products');
 
 
-        collection.find({
+        collection.find(
             filters
-        }).toArray(function (err, docs) {
+        ).toArray(function (err, docs) {
             assert.equal(err, null);
 
             // objeto contexto 
             var context = {
 
-                store: docs,
+                products: docs,
             };
 
             //renderiza los handlebars en el main

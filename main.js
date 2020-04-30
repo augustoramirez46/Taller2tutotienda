@@ -20,7 +20,6 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 
-
 //CTRL + C cierra el server en la terminal
 //el / es el que determina la pagina en la que funcionan
 
