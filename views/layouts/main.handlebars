@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tienda</title>
 
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
@@ -14,15 +14,22 @@
 
     <div class="landing-color">
         <button class="hamburguerbtn">
-            <img src="./img/svg/ham_menu.svg" class="hamburguerbtn__icon" alt="">
+            <img src="/img/svg/ham_menu.svg" class="hamburguerbtn__icon" alt="">
         </button>
+
+
 
         <header class="nav">
 
-            <img src="./img/svg/circle1.svg" class="nav__elipse" alt="">
+            <div class="nav__store">
+                <img src="/img/svg/logo_tienda.svg" alt="" class="nav__log">
 
-            <a href="/" class="nav__link nav__link--select">Inicio</a>
-            <a href="/tienda" class="nav__link">Tienda</a>
+            </div>
+
+            <img src="/img/svg/circle1.svg" class="nav__elipse" alt="">
+
+            <a href="/" class="nav__link">Inicio</a>
+            <a href="/tienda" class="nav__link nav__link--select">Tienda</a>
             <a href="#" class="nav__link">Contacto</a>
             <a href="#" class="nav__link">Quien Soy</a>
             <a href="#" class="nav__link">Carrito</a>
@@ -31,8 +38,19 @@
         </header>
 
         {{{ body }}}
+
+
     </div>
 
+    <footer class="footer">
+        <section class="footer__newsletter">
+            <h5 class="footer__title">Suscribete a nuestro newsletter!</h5>
+            <div class="footer__input">
+                <input type="email" class="footer__email" placeholder="Pon tu e-mail">
+                <button class="footer__button">Estoy dentro!</button>
+            </div>
+        </section>
+    </footer>
     <script src="/scripts/client.js"></script>
 </body>
 

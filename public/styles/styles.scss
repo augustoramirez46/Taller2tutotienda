@@ -10,6 +10,7 @@ body {
     font-family: 'Lato';
     font-size: 16px;
     box-sizing: border-box;
+    margin: 0;
 
     /*  @media (max-width: $smallDevice) {
         width: 100vw;
@@ -24,53 +25,4 @@ body {
 @import "./gallery";
 @import "./tablaSpec";
 @import "./footer";
-
-.productContainer {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    padding: 5% 20% 0 20%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-}
-
-.thumb {
-
-    display: flex;
-    flex-direction: column;
-
-    width: 150px;
-    height: 200px;
-    border: ridge;
-    border-color: cadetblue;
-    margin: 1em;
-
-    &__img {
-        width: 100%;
-        border: dashed;
-        border-color: brown;
-    }
-
-    &__link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
-        color: $lightGray;
-    }
-
-    &__title {
-        margin: 0;
-        font-size: 12px;
-    }
-
-    &__price {
-        margin: 0;
-        font-size: 11px;
-    }
-
-
-}
+@import "./store"

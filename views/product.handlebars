@@ -1,13 +1,23 @@
-<h1>{{ title }}</h1>
-<h3>Precio: {{  price  }}</h3>
+<section class="product">
 
-<img src="{{ img }}" alt="">
+    <img src="{{ imgPath }}" alt="" class="product__img">
+    <div class="product__info">
+        <a href="*" class="product__tag nav__link"> {{ cathegory }}</a>
+        <h1 class="product__title">{{ title }}</h1>
+        <h3 class="product__price">Precio: {{  price  }}</h3>
+        <p class="product__description"> {{ description }}</p>
 
 
-<!-- este es el if, dependiendo de la variable que se le pase -->
-<!-- si esta esta vacia, no entra al if -->
-{{#if options}}
-{{#each options}}
-<h1>hola desde las opciones disponibles</h1>
-{{/each}}
-{{/if}}
+
+
+        <!-- este es el if, dependiendo de la variable que se le pase -->
+        <!-- si esta esta vacia, no entra al if -->
+        {{#if options}}
+        {{#each options}}
+        <h1>hola desde las opciones disponibles</h1>
+        {{/each}}
+        {{/if}}
+    </div>
+
+
+</section>

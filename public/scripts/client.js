@@ -1,27 +1,30 @@
+var slider = document.querySelector('.gallery__gallery');
 var hambtn = document.querySelector('.hamburguerbtn');
+var mainnav = document.querySelector('.nav');
 
-if (hambtn) {
-    var mainnav = document.querySelector('.nav');
+var handleHamClick = function (event) {
+    console.log(event);
+    mainnav.classList.toggle('nav--mobile');
+}
 
-    var handleHamClick = function (event) {
-        console.log(event);
-        mainnav.classList.toggle('nav--mobile');
+hambtn.addEventListener('click', handleHamClick);
+
+function handleWindowResize(event) {
+    if (window.innerWidth > 575.98) {
+        mainnav.classList.remove('nav--mobile');
     }
+}
 
-    hambtn.addEventListener('click', handleHamClick);
+window.addEventListener('resize', handleWindowResize);
 
-    function handleWindowResize(event) {
-        if (window.innerWidth > 575.98) {
-            mainnav.classList.remove('nav--mobile');
-        }
-    }
+if (slider) {
 
-    window.addEventListener('resize', handleWindowResize);
+
 
     var btnR = document.querySelector('.gallery__bton--right');
     var btnL = document.querySelector('.gallery__bton--left');
     var strip = document.querySelector('.gallery__strip');
-    var slider = document.querySelector('.gallery__gallery');
+
     var pX = 0;
     var width = slider.offsetWidth;
 
@@ -70,13 +73,6 @@ if (hambtn) {
 
     thumbs.forEach(iterateThumbs);
 
-
-
-
-
-
-
-
     var buttonCalc = document.querySelector('.publicidadCalcas__button');
 
     function botonCalcClick() {
@@ -91,13 +87,15 @@ if (hambtn) {
 
 
 var lt_filter = document.querySelector('select');
+if (lt_filter) {
+    lt_filter.addEventListener('change', function () {
 
-lt_filter.addEventListener('change', function () {
+        let url = location.pathname;
+        url = url + '?price_lt=' + lt_filter.value;
+        location.href = url;
 
-    let url = location.pathname;
-    url = url + '?price_lt=' + lt_filter.value;
-    location.href = url;
+        console.log(url);
 
-    console.log(url);
+    });
 
-});
+}
