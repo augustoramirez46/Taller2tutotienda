@@ -27,37 +27,4 @@ body {
 @import "./tablaSpec";
 @import "./footer";
 @import "./store";
-
-.product {
-    box-sizing: border-box;
-    width: 100%;
-    height: fit-content;
-    padding: 0% 10%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-
-    &__img {
-        width: 600px;
-        margin: 5%;
-
-    }
-
-    &__tag {
-        margin: 0;
-        padding: 1em;
-
-        font-size: 1em;
-    }
-
-    &__info {
-        width: 300px;
-        margin: 5%;
-    }
-
-    &__description {
-        width: 200px;
-    }
-}
+@import "./product";

@@ -86,12 +86,53 @@ if (slider) {
 };
 
 
-var lt_filter = document.querySelector('.filter__selectLT');
+var lt_filter = document.querySelector('.filter__select--Lt');
 if (lt_filter) {
     lt_filter.addEventListener('change', function () {
 
         let url = location.pathname;
         url = url + '?price_lt=' + lt_filter.value;
+        location.href = url;
+
+        console.log(url);
+
+    });
+};
+
+var search_tag = document.querySelector('.filter__select--tag');
+if (search_tag) {
+    search_tag.addEventListener('change', function () {
+
+        let url = location.pathname;
+        url = url + '?search_tag=' + search_tag.value;
+        location.href = url;
+
+        console.log(url);
+
+    });
+
+}
+
+var colorEq = document.querySelector('.filter__select--color');
+if (colorEq) {
+    colorEq.addEventListener('change', function () {
+
+        let url = location.pathname;
+        url = url + '?search_color=' + colorEq.value;
+        location.href = url;
+
+        console.log(url);
+
+    });
+
+}
+
+var sorti = document.querySelector('.filter__select--sort');
+if (sorti) {
+    sorti.addEventListener('change', function () {
+
+        let url = location.pathname;
+        url = url + '?sort=' + sorti.value;
         location.href = url;
 
         console.log(url);

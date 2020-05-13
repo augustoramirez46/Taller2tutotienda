@@ -1,7 +1,7 @@
 <nav class="storeNav">
     <div class="filter">
         <h2 class="filter__title"> Precio </h2>
-        <select class="filter__selectLT">
+        <select class="filter__select filter__select--Lt">
             <option value="" disabled="true" selected="true">Selecciona una opción...</option>
             <option value="30001">Menor a $30.000</option>
             <option value="15001">Menor a $15.000</option>
@@ -11,14 +11,45 @@
 
     <div class="filter">
         <h2 class="filter__title"> Categoría </h2>
-        <select class="filter__select">
+        <select class="filter__select filter__select--tag">
             <option value="" disabled="true" selected="true">Selecciona una opción...</option>
-            <option value="30001">Menor a $30.000</option>
-            <option value="15001">Menor a $15.000</option>
-            <option value="10001">Menor a $10.000</option>
+            <option value='Poster'>Posters</option>
+            <option value='Camiseta'>Camisetas</option>
+            <option value='Pin'>Pins</option>
+            <option value='Sticker'>Stickers</option>
+
         </select>
     </div>
 
+    <div class="filter">
+        <h2 class="filter__title"> Color </h2>
+        <select class="filter__select filter__select--color">
+            <option value="" disabled="true" selected="true">Selecciona una opción...</option>
+            <option value='Amarillo'>Amarillo</option>
+            <option value='Azul'>Azul</option>
+            <option value='Blanco'>Blanco</option>
+            <option value='Mixto'>Mixto</option>
+            <option value='Negro'>Negro</option>
+            <option value='Rosado'>Rosado</option>
+            <option value='Verde'>Verde</option>
+
+
+        </select>
+    </div>
+
+    <div class="filter">
+        <h2 class="filter__title">Ordenar por</h2>
+        <select class="filter__select filter__select--sort">
+            <option value="" disabled="true" selected="true">Selecciona una opción...</option>
+            <option value='price_desc'>Precio descendiente</option>
+            <option value='price_asc'>Precio ascendiente</option>
+            <option value='pop_desc'>Popularidad descendiente</option>
+            <option value='pop_asc'>Popularidad ascendiente</option>
+
+
+
+        </select>
+    </div>
 </nav>
 
 <section class="productContainer">

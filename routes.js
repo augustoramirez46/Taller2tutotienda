@@ -49,13 +49,46 @@ function configureRoutes(app, db) {
 
         };
 
-        if (req.query.search) {
+        if (req.query.search_tag) {
+            console.log(req.query.search_tag);
+            filters.$and.push({
+                cathegory: {
+                    $regex: new RegExp(req.query.search_tag, 'i'),
+                },
+            });
 
         };
 
+        if (req.query.search_color) {
+
+            filters.$and.push({
+                color: {
+                    $regex: new RegExp(req.query.search_color, 'i'),
+                },
+            });
+
+        };
         if (filters.$and.length === 0) {
             delete filters.$and;
         }
+
+        var sortings = {
+
+        };
+        if (req.query.sort == 'price_desc') {
+            sortings.price = -1;
+        }
+        if (req.query.sort == 'price_asc') {
+            sortings.price = 1;
+        }
+
+        if (req.query.sort == 'pop_desc') {
+            sortings.popular = -1;
+        }
+        if (req.query.sort == 'pop_asc') {
+            sortings.popular = 1;
+        }
+
 
         // Get the documents collection
         const collection = db.collection('products');
@@ -63,6 +96,8 @@ function configureRoutes(app, db) {
 
         collection.find(
             filters
+        ).sort(
+            sortings
         ).toArray(function (err, docs) {
             assert.equal(err, null);
 

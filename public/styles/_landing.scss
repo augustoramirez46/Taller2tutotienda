@@ -37,6 +37,11 @@
 
         display: flex;
         flex-direction: row-reverse;
+
+        @media (max-width: $smallDevice) {
+            display: none;
+
+        }
     }
 
     &__log {
