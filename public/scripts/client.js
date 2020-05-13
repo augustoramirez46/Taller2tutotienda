@@ -86,7 +86,7 @@ if (slider) {
 };
 
 
-var lt_filter = document.querySelector('select');
+var lt_filter = document.querySelector('.filter__selectLT');
 if (lt_filter) {
     lt_filter.addEventListener('change', function () {
 
