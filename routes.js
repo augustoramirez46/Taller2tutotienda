@@ -160,6 +160,21 @@ function configureRoutes(app, db) {
 
     // });
 
+    // mostrar info usuario
+    app.get('/checkout', function (req, res) {
+        res.render('checkout');
+    });
+
+
+    //recibir info usuario, se puede repetir porque es POST
+    app.post('/checkout', function (req, res) {
+
+        // cuando es post es BODY en logar de QUERY
+        // console.log(req.body.name)
+        console.log(req.body);
+        res.send('test');
+
+    });
 }
 
 module.exports = configureRoutes;

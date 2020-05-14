@@ -11,6 +11,10 @@ const app = express();
 //npm nodemon index.js
 //o npm start
 
+app.use(express.urlencoded({
+    extended: true
+}));
+
 // setea el render del doc con handlebars
 app.engine('handlebars', xprshandle());
 // use el motor de render handlebars
