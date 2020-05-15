@@ -1,17 +1,43 @@
 <section class="checkout">
 
     <h1 class="checkout__title">Checkout</h1>
-
-    <form action="/checkout" method="POST">
-        <label>
+    {{#if showError}}
+    <h2>Error</h2>
+    <p>No llenaste los campos completos makia</p>
+    {{/if}}
+    <form action="/checkout" method="POST" class="checkout">
+        <label class="checkout__label">
             Nombre completo
-            <input type="text" placeholder="Carlos..." name="name" required="true">
+            <input class="checkout__input" type="text" placeholder="Carlos..." name="name" required="true">
         </label>
-        <label>
+        <label class="checkout__label">
             Dirección
-            <input type="text" placeholder="Calle 96 #..." name="address" required="true">
+            <input class="checkout__input" type="text" placeholder="Calle 96 #..." name="address" required="true">
         </label>
-        <button>Listolan!</button>
+
+
+        <label class="checkout__label">
+            Edad
+            <input class="checkout__input" type="number" placeholder="-" name="age" required="false">
+        </label>
+
+        <div class="checkout__label">
+            <h2>Método de pago</h2>
+            <div>
+
+                <label class="checkout__label">
+                    Fiadito
+                    <input type="radio" name="paymentType" value="lease" required="true">
+                </label>
+
+                <label class="checkout__label">
+                    Contra-entrega
+                    <input type="radio" name="paymentType" value="on-door" required="true">
+                </label>
+
+            </div>
+        </div>
+        <button class="checkout__button">Listolan!</button>
     </form>
 
 </section>

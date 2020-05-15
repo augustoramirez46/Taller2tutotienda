@@ -162,7 +162,13 @@ function configureRoutes(app, db) {
 
     // mostrar info usuario
     app.get('/checkout', function (req, res) {
-        res.render('checkout');
+
+        console.log(req.query.error)
+        var context = {
+            showError: req.query.error,
+        }
+
+        res.render('checkout', context);
     });
 
 
@@ -172,8 +178,33 @@ function configureRoutes(app, db) {
         // cuando es post es BODY en logar de QUERY
         // console.log(req.body.name)
         console.log(req.body);
-        res.send('test');
 
+        var {
+            name,
+            address
+        } = req.body;
+
+        req.body.creation_date = new Date();
+
+        if (!name || !address) {
+            // res.send('error');
+            res.redirect('/checkout?error=true');
+            return;
+
+        }
+
+        // Get the documents collection
+        const collection = db.collection('orders');
+        collection.insert(req.body)
+
+        //   res.send('test');
+        res.redirect('/confirmacion');
+
+    });
+
+    app.get('/confirmacion', function (req, res) {
+
+        res.redirect('/tienda');
     });
 }
 
